@@ -1,5 +1,5 @@
 function(doc){
-	if(doc._id.substr(0,6) === "comics"){
+	if(doc._id.substr(0,10) === "jsoncomics"){
 		emit(doc._id,{
 			"title": doc.title,
 			"volume": doc.volume,
