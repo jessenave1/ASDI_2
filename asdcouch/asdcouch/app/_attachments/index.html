@@ -16,7 +16,7 @@
     </head>
     <body style="background-color:orange">
         
-        <div data-role=page id="page1">
+        <div id="page1">
         <h1>Comic Book Inventory</h1>
         <form method= "Link" action="addItem.html" method="post" id="contactForm">
             <fieldset id="reg">
@@ -28,6 +28,7 @@
                     <button type="button" id="xmlbutton" name="xmlbutton" value="getxml" class="css3button">XML</button>
                     <button type="button" id="csvbutton" name="csvbutton" value="getcsv" class="css3button">CSV</button>
                     <button type="button" id="couchbutton" name="couchbutton" value="getjson" class="css3button">COUCH BUTTON</button>
+                 
                 </ul>
                 <div id="cm"></div>
                 <img id="hero" src="super_hero1.png" width="200" height="300"/>
@@ -50,7 +51,7 @@
             </aside>
             </ul>
             <ul>
-                <li><label id="browse">Browse all comics.</label></li>
+                <li><label id="browse2">Browse all comics.</label></li>
                 <nav>
                     <a href="#" id="allcomics" onclick="parent.location='allcomics.html'">Your Inventory</a>
                 </nav>
@@ -59,6 +60,7 @@
         </div>
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
         <script type="text/javascript" src="main.js"></script>
+        <script src="jquery.couch.js"></script>
     </body>
 </html>
 <!------>
