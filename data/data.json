@@ -1,0 +1,13 @@
+{
+    "comics":
+    [
+                {"title": "Title: Default Comic (JSON)",
+                "volume": "Volume: 1",
+                "issue": "Issue: 100",
+                "pubDate": "Publication Date: 05/24/1971",
+                "publisher": "Publisher: other",
+                "ammount": "Ammount: 1",
+                "favorite": "Favorite? Yes",
+                "notes": "Notes: This is the default comic book."}
+    ]
+}
