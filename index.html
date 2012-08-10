@@ -1,64 +1,134 @@
-<!DOCTYPE html>
-<!-- Simple comic book inventory app -->
-<!--Author: Jesse Nave-->
-<html lang="en">
-    <head>
-        <meta charset="utf-8"/>
-        <meta description="Comic book inventory list."/>
-        <meta name="author" content="SitePoint"/>
-        <meta keywords="comic, books, collection"/>
-        <meta name="robots" content="index, follow"/>
-        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0"/>
-        <meta name="HandheldFriendly" content="True"/>
-        <meta name="MobileOptimized" content="320"/>
-        <link href="form.css" rel="stylesheet"/>
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-        <title>COMIC BOOK INVENTORY</title>
-    </head>
-    <body style="background-color:orange">
-        
-        <div data-role=page id="page1">
-        <h1>Comic Book Inventory</h1>
-        <form method= "Link" action="addItem.html" method="post" id="contactForm">
-            <fieldset id="reg">
-                <legend id="which">Add a Comic!</legend>
-                <ul id="dataul">
-                    <li><label id="words" for="addComic">Keep your comic book inventory with you!</label></li>
-                    <button type="button" id="additem" name="additem" value="Save Comic" class="css3button">Add Comic</button>
-                    <button type="button" id="jsonbutton" name="jsonbutton" value="getjson" class="css3button">JSON</button>
-                    <button type="button" id="xmlbutton" name="xmlbutton" value="getxml" class="css3button">XML</button>
-                    <button type="button" id="csvbutton" name="csvbutton" value="getcsv" class="css3button">CSV</button>
-                </ul>
-                <div id="cm"></div>
-                <img id="hero" src="super_hero1.png" width="200" height="300"/>
-                <ul id="je">
-                    <li><label for="search">Search saved Comics</label><input type="text" id="search" onfocus="styleField();" onblur="unStyleField();"/></li>
-                </ul>
-            </fieldset>
-            <ul>
-                <li><label id="browse">Browse recently added comics.</label></li>
-                <aside id="links">
-                <nav>
-                    <a href="#" id="comic1" onclick="parent.location='comic1.html'">Spider-Man #456</a>
-                </nav>
-                <nav>
-                    <a href="#" id="comic2" onclick="parent.location='comic2.html'">Superman #205</a>
-                </nav>
-                <nav>
-                    <a href="#" id="comic3" onclick="parent.location='comic3.html'">Iron Man #376</a> 
-                </nav>
-            </aside>
-            </ul>
-            <ul>
-                <li><label id="browse">Browse all comics.</label></li>
-                <nav>
-                    <a href="#" id="allcomics" onclick="parent.location='allcomics.html'">Your Inventory</a>
-                </nav>
-            </ul>
-        </form>
-        </div>
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Cordova</title>
+<script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
 
-        <script type="text/javascript" src="js/main.js"></script>
-    </body>
+<link rel="stylesheet" href="jquery.mobile-1.0.1.min.css" />
+</head>
+<body>
+<section id="page1" data-role="page" data-theme="b">
+	
+	<header data-role="header" data-theme="b"><h1>AVF Demo</h1></header>
+	
+	<div data-role="content" class="content" data-theme="b">
+		<h3>CRUD Apps</h3>
+		<ul data-role="listview" data-theme="b">
+			<li><a rel="external" href="startpage.html">Original CRUD app</a></li>
+			<li><a href="#">Revised or new CRUD app</a></li>
+		</ul>
+		<h3>iOS/Android Native Feature Demo(s)</h3>
+		<ul data-role="listview" data-theme="b">
+			<li><a href="#page3">Alert</a></li>
+			<li><a href="#page2">Accelerometer</a></li>
+		</ul>
+		
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<h4>Jesse Nave AVF 0812</h4>
+		</div>
+	</div>
+</section>
+
+<section id="page2" data-role="page" data-theme="b">
+	
+	<header data-role="header" data-theme="b"><h1>Accelerometer</h1></header>
+	
+	<div id="accel" class="content" data-role="content" data-theme="b">
+		
+		<p>Current Acceleration</p>
+		
+		<div id="accelerometer">Waiting for accelerometer...</div>
+		
+	</div>
+	
+</section>
+
+<section id="page3" data-role="page" data-theme="b">
+	
+	<header data-role="header" data-theme="b"><h1>Alert</h1></header>
+	
+	<div id="accel" class="content" data-role="content" data-theme="b">
+		
+		<div id="alert" data-theme="b">
+			
+			<a id="alertButton" data-role="button">PRESS FOR ALERT!!</a>
+			
+		</div>
+		
+	</div>
+	
+</section>
+
+<script type="text/javascript" src="jquery.1.7.1.js"></script>
+<script type="text/javascript" src="jquery.mobile-1.1.0.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+
+    //wait for PhoneGap to load
+	document.addEventListener("deviceready", $.loaded, false);
+	 
+	// PhoneGap is ready
+	$.loaded = function() {
+	    $.startWatch();
+	};
+	 
+	// Start watching the acceleration
+	 
+	$.startWatch = function() {
+	 
+	    // Update acceleration every 3 seconds
+	    var options = { frequency: 300 };
+	 
+	    var watchID = navigator.accelerometer.watchAcceleration($.onSuccess, $.onError, options);
+	};
+	 
+	// Stop watching the acceleration
+	$.stopWatch = function() {
+	    if ($.watchID) {
+	        navigator.accelerometer.clearWatch($.watchID);
+	        $.watchID = null;
+	    }
+	};
+	 
+	// Success
+	$.onSuccess = function(acceleration) {
+	    var element = $('#accelerometer');
+	    $.element.html = 'Acceleration X: ' + acceleration.x + '<br />' +
+	                        'Acceleration Y: ' + acceleration.y + '<br />' +
+	                        'Acceleration Z: ' + acceleration.z + '<br />' +
+	                        'Timestamp: '      + acceleration.timestamp + '<br />';
+	                        console.log($.element);
+	};
+	
+	
+	 
+	 // Error
+	$.onError = function() {
+	    alert('onError!');
+	};
+$("#alertButton").click(function(){
+	$.showAlert = function() {
+        navigator.notification.alert(
+            'You are the winner!',  // message
+            'Game Over',            // title
+            'Done'                  // buttonName
+        );
+    };
+
+    // Beep three times
+    //
+    $.playBeep = function() {
+        navigator.notification.beep(3);
+    };
+
+    // Vibrate for 2 seconds
+    //
+    $.vibrate = function() {
+        navigator.notification.vibrate(2000);
+    };
+    });
+    </script>
+
+
+</body>
 </html>
-<!------>
+<!---->
