@@ -42,8 +42,8 @@ h1{
     font-family: ACMR;
     color: blue;
     margin: 0px 0px 5px 0px;
-    padding: 15px 5px 10px 20px;
-    width: auto;
+    padding: 15px 0px 10px 0px;
+    width: 100%;
     text-align:center;
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0.10, #F79E20), color-stop(0.45, white), color-stop(0.65, #F79E20));
     background: -moz-linear-gradient(center top, rgb(247,158,30)10%, rgb(255,255,255)45%, rgb(247,158,30)65%);
@@ -52,6 +52,7 @@ h3{
 font-family: AMCR;
 color:blue;
 text-align:center;
+margin-top:50px;
 
 }
 
@@ -72,15 +73,24 @@ textarea{
 body{
     font-family: ACMR;
     background: orange;
-    width: auto;
+    width: 100%;
     /*border: 3px solid #995522;*/
+}
+
+#page1{
+	
+	width: 100%;
+}
+
+form{
+	
+	width: 100%;
 }
 footer{
 	font-family: ACMR;
     color: blue;
     position:absolute;
 	bottom:0;
-    padding: 6px 0px 0px 0px;
     width: 100%;
 	height:50px;
     text-align:center;
@@ -88,9 +98,9 @@ footer{
     background: -moz-linear-gradient(center top, rgb(247,158,30)10%, rgb(255,255,255)45%, rgb(247,158,30)65%);
 	
 	}
-#contactForm{width: 400px; height:690px; overflow: scroll; border: 3px solid #995522;}
+#contactForm{width: 100%; overflow: scroll; border: 3px solid #995522;}
 
-#reg{margin: 15px 15px 15px 15px;}
+#reg{margin: 15px 0px 0px 0px;}
 
 #es{margin: 5px 5px 5px 5px;}
 
@@ -117,7 +127,7 @@ footer{
 }
 #hero{
     
-    margin: 0px 0px 0px 75px;
+    margin: 0px 0px 0px 85px;
 }
 #canvas1{
     margin: 0px 0px 0px 0px;
@@ -127,11 +137,15 @@ footer{
     font-family: ACMR;
     color: blue;
     margin: 0px 0px 0px 0px;
-    padding: 0px 0px 0px 95px;
+    padding: 0px 0px 0px 65px;
+}
+
+#jer{
+	width: 100%;
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0.10, #F79E20), color-stop(0.45, white), color-stop(0.65, #F79E20));
     background: -moz-linear-gradient(center top, rgb(247,158,30)10%, rgb(255,255,255)45%, rgb(247,158,30)65%);
 }
-
+}
 #button{
     margin: 0px 0px 0px 10px;
 }
@@ -198,7 +212,8 @@ margin: 50px 0px 0px 0px;
     text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
     border-bottom: 1px solid rgba(0,0,0,0.25);
     position: relative;
-    cursor: pointer
+    cursor: pointer;
+	width:140px;
 	margin-top: 15px;
 	margin-right: auto;
 	margin-left: auto;
