@@ -14,133 +14,43 @@
         <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0"/>
         <meta name="HandheldFriendly" content="True"/>
         <meta name="MobileOptimized" content="320"/>
+        <link href="form.css" rel="stylesheet"/>
 <title>Cordova</title>
-<script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
+<script type="text/javascript" charset="utf-8" src="cordova-2.0.0.js"></script>
 
-<link rel="stylesheet" href="jquery.mobile-1.0.1.min.css" />
 </head>
 <body>
-<section id="page1" data-role="page" data-theme="b">
+<section id="page1">
 	
-	<header data-role="header" data-theme="b"><h1>AVF Demo</h1></header>
-	
-	<div data-role="content" class="content" data-theme="b">
+	<header><h1>AVF Demo</h1></header>
+
+	<div class="content">
 		<h3>CRUD Apps</h3>
-		<ul data-role="listview" data-theme="b">
-			<li><a rel="external" href="startpage.html">Original CRUD app</a></li>
-			<li><a href="#">Revised or new CRUD app</a></li>
-		</ul>
+		<div class="myDiv">
+			<form method="get" action="startpage.html">
+			<input class="css3button" type="submit" value="Old App" />
+			</form>
+			<form method="get" action="startpage.html">
+			<input style="margin-top:15px" class="css3button" type="submit" value="Revised App" />
+			</form>
+		</div>
 		<h3>iOS/Android Native Feature Demo(s)</h3>
-		<ul data-role="listview" data-theme="b">
-			<li><a href="#page3">Alert</a></li>
-			<li><a href="#page2">Accelerometer</a></li>
-		</ul>
-		
-		<div data-role="footer" data-position="fixed" data-theme="b">
-			<h4>Jesse Nave AVF 0812</h4>
-		</div>
-	</div>
-</section>
-
-<section id="page2" data-role="page" data-theme="b">
-	
-	<header data-role="header" data-theme="b"><h1>Accelerometer</h1></header>
-	
-	<div id="accel" class="content" data-role="content" data-theme="b">
-		
-		<p>Current Acceleration</p>
-		
-		<div id="accelerometer">Waiting for accelerometer...</div>
-		
-	</div>
-	
-</section>
-
-<section id="page3" data-role="page" data-theme="b">
-	
-	<header data-role="header" data-theme="b"><h1>Alert</h1></header>
-	
-	<div id="accel" class="content" data-role="content" data-theme="b">
-		
-		<div id="alert" data-theme="b">
-			
-			<a id="alertButton" data-role="button">PRESS FOR ALERT!!</a>
-			
+		<div class="myDiv">
+			<form method="get" action="alert.html">
+			<input class="css3button" type="submit" value="Alert" />
+			</form>
+			<form method="get" action="accelerometer.html">
+			<input style="margin-top:15px;" class="css3button" type="submit" value="Acceleration" />
+			</form>
 		</div>
 		
 	</div>
-	
+
+	<footer>
+		<h4>Jesse Nave AVF 0812</h4>
+	</footer>
+		
 </section>
-
-<script type="text/javascript" src="jquery.1.7.1.js"></script>
-<script type="text/javascript" src="jquery.mobile-1.1.0.min.js"></script>
-<script type="text/javascript" charset="utf-8">
-
-    //wait for PhoneGap to load
-	document.addEventListener("deviceready", $.loaded, false);
-	 
-	// PhoneGap is ready
-	$.loaded = function() {
-	    $.startWatch();
-	};
-	 
-	// Start watching the acceleration
-	 
-	$.startWatch = function() {
-	 
-	    // Update acceleration every 3 seconds
-	    var options = { frequency: 300 };
-	 
-	    var watchID = navigator.accelerometer.watchAcceleration($.onSuccess, $.onError, options);
-	};
-	 
-	// Stop watching the acceleration
-	$.stopWatch = function() {
-	    if ($.watchID) {
-	        navigator.accelerometer.clearWatch($.watchID);
-	        $.watchID = null;
-	    }
-	};
-	 
-	// Success
-	$.onSuccess = function(acceleration) {
-	    var element = $('#accelerometer');
-	    $.element.html = 'Acceleration X: ' + acceleration.x + '<br />' +
-	                        'Acceleration Y: ' + acceleration.y + '<br />' +
-	                        'Acceleration Z: ' + acceleration.z + '<br />' +
-	                        'Timestamp: '      + acceleration.timestamp + '<br />';
-	                        console.log($.element);
-	};
-	
-	
-	 
-	 // Error
-	$.onError = function() {
-	    alert('onError!');
-	};
-$("#alertButton").click(function(){
-	$.showAlert = function() {
-        navigator.notification.alert(
-            'You are the winner!',  // message
-            'Game Over',            // title
-            'Done'                  // buttonName
-        );
-    };
-
-    // Beep three times
-    //
-    $.playBeep = function() {
-        navigator.notification.beep(3);
-    };
-
-    // Vibrate for 2 seconds
-    //
-    $.vibrate = function() {
-        navigator.notification.vibrate(2000);
-    };
-    });
-    </script>
-
 
 </body>
 </html>
