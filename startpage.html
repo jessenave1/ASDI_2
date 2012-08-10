@@ -8,7 +8,7 @@
         <meta name="author" content="SitePoint"/>
         <meta keywords="comic, books, collection"/>
         <meta name="robots" content="index, follow"/>
-        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0"/>
+        <meta name="viewport" content="width=default-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
         <meta name="HandheldFriendly" content="True"/>
         <meta name="MobileOptimized" content="320"/>
         <link href="form.css" rel="stylesheet"/>
@@ -17,23 +17,31 @@
     </head>
     <body style="background-color:orange">
         
-        <div data-role="page" id="page1">
+        <div id="page1">
         <h1>Comic Book Inventory</h1>
         <form method= "Link" action="addItem.html" method="post" id="contactForm">
             <fieldset id="reg">
                 <legend id="which">Add a Comic!</legend>
                 <ul id="dataul">
                     <li><label id="words" for="addComic">Keep your comic book inventory with you!</label></li>
-                    <button type="button" id="additem" name="additem" value="Save Comic" class="css3button">Add Comic</button>
-                    <button type="button" id="jsonbutton" name="jsonbutton" value="getjson" class="css3button">JSON</button>
-                    <button type="button" id="xmlbutton" name="xmlbutton" value="getxml" class="css3button">XML</button>
-                    <button type="button" id="csvbutton" name="csvbutton" value="getcsv" class="css3button">CSV</button>
+                    <div>
+                    <button style="margin-left:30px" type="button" id="additem" name="additem" value="Save Comic" class="css3button">Add Comic</button>
+                    </div>
+                    <div>
+                    <button style="margin-left:30px" type="button" id="jsonbutton" name="jsonbutton" value="getjson" class="css3button">JSON</button>
+                    </div>
+                    <div>
+                    <button style="margin-left:30px" type="button" id="xmlbutton" name="xmlbutton" value="getxml" class="css3button">XML</button>
+                    </div>
+                    <div>
+                    <button style="margin-left:30px" type="button" id="csvbutton" name="csvbutton" value="getcsv" class="css3button">CSV</button>
+                    </div>
                 </ul>
-                <div id="cm"></div>
-                <img id="hero" src="super_hero1.png" width="200" height="300"/>
-                <ul id="je">
-                    <li><label for="search">Search saved Comics</label><input type="text" id="search" onfocus="styleField();" onblur="unStyleField();"/></li>
-                </ul>
+                <div id="cm"> </div>
+                <img id="hero" src="super_hero1.png" width="100" height="150"/>
+                <div id="jer">
+                    <li id="je" ><label for="search">Search saved Comics</label><input type="text" id="search" onfocus="styleField();" onblur="unStyleField();"/></li>
+                </div>
             </fieldset>
             <ul>
                 <li><label id="browse">Browse recently added comics.</label></li>
@@ -50,7 +58,7 @@
             </aside>
             </ul>
             <ul>
-                <li><label id="browse">Browse all comics.</label></li>
+                <li><label id="browse1">Browse all comics.</label></li>
                 <nav>
                     <a href="#" id="allcomics" onclick="parent.location='allcomics.html'">Your Inventory</a>
                 </nav>

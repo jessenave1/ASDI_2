@@ -6,15 +6,29 @@
         <meta charset="utf-8"/>
         <meta name="author" content="SitePoint"/>
         <meta name="robots" content="index, follow"/>
-        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0"/>
+        <meta name="viewport" content="width=default-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
         <meta name="HandheldFriendly" content="True"/>
         <meta name="MobileOptimized" content="320"/>
         <link href="form.css" rel="stylesheet"/>
         <script type="text/javascript" charset="utf-8" src="cordova-2.0.0.js"></script>
     <title>Notification Example</title>
-
-    <script type="text/javascript" charset="utf-8" src="cordova-2.0.0.js"></script>
-    <script type="text/javascript" charset="utf-8">
+    
+  </head>
+  <body>
+  <h1>Alert Demo</h1>
+  <div class="myDiv1">
+    <button type="button" id="newButton1" name="showButton" value="Show" class="css3button" onclick="showAlert(); return false;">Show Alert</button>
+    </div>
+    <div class="myDiv2">
+    <button type="button" id="newButton2" name="beepButton" value="Beep" class="css3button" onclick="playBeep(); return false;">Beep</button>
+    </div>
+    <div class="myDiv2">
+    <button type="button" id="newButton3" name="vibeButton" value="Vibrate" class="css3button" onclick="vibrate(); return false;">Vibrate</button>
+    </div>
+    <footer>
+		<h4>Jesse Nave AVF 0812</h4>
+	</footer>
+	<script type="text/javascript" charset="utf-8">
 
     document.addEventListener("deviceready", onDeviceReady, false);
 
@@ -39,17 +53,5 @@
     }
 
     </script>
-  </head>
-  <body>
-  <h1>Alert Demo</h1>
-  <div class="myDiv1">
-    <button type="button" id="newButton1" name="showButton" value="Show" class="css3button" onclick="showAlert(); return false;">Show Alert</button>
-    </div>
-    <div class="myDiv2">
-    <button type="button" id="newButton2" name="beepButton" value="Beep" class="css3button" onclick="playBeep(); return false;">Beep</button>
-    </div>
-    <div class="myDiv2">
-    <button type="button" id="newButton3" name="vibeButton" value="Vibrate" class="css3button" onclick="vibrate(); return false;">Vibrate</button>
-    </div>
   </body>
 </html>
