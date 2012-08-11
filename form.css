@@ -52,7 +52,7 @@ h3{
 font-family: AMCR;
 color:blue;
 text-align:center;
-margin-top:50px;
+margin-top:20px;
 
 }
 
@@ -145,7 +145,6 @@ footer{
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0.10, #F79E20), color-stop(0.45, white), color-stop(0.65, #F79E20));
     background: -moz-linear-gradient(center top, rgb(247,158,30)10%, rgb(255,255,255)45%, rgb(247,158,30)65%);
 }
-}
 #button{
     margin: 0px 0px 0px 10px;
 }
@@ -182,7 +181,7 @@ footer{
 }
 
 .myDiv{
-margin:0px 0px 0px 100px;	
+margin:0px 0px 0px 50px;	
 }
 .myDiv1{
 margin:50px 0px 0px 100px;		
