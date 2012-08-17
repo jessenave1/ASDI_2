@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta description="Comic book inventory list."/>
+        <meta name="author" content="SitePoint"/>
+        <meta keywords="comic, books, collection"/>
+        <meta name="robots" content="index, follow"/>
+        <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+        <meta name="HandheldFriendly" content="True"/>
+        <meta name="MobileOptimized" content="320"/>
+        <link href="form.css" rel="stylesheet"/>
+<title>Comic Keeper(Compass)</title>
+<script type="text/javascript" charset="utf-8" src="cordova-2.0.0.js"></script>
+
+</head>
+  <body>
+    <h1>Compass</h1>
+    <p>getCurrentHeading</p>
+    
+        <script type="text/javascript" charset="utf-8">
+
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    function onDeviceReady() {
+        navigator.compass.getCurrentHeading(onSuccess, onError);
+    }
+
+    function onSuccess(heading) {
+        alert('Heading: ' + heading);
+    }
+
+    function onError() {
+        alert('onError!');
+    }
+	</script>
+  </body>
+</html>
