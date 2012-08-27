@@ -35,12 +35,14 @@
     NSLog(@"myFloat%d", (int)myFloat);
     
     //AND OR comparison
+    NSLog(@"AND OR COMPARISON");
     if (((myFloat != 0 && (int)myFloat == 32) || (((int)myFloat < 100) && myFloat > 22))) {
         myBool = YES;
     }
     NSLog(@"myString=%s, myBool=%c", myString, myBool);
     
     //If/else check
+    NSLog(@"IF/ELSE CHECK");
     if (myBool == YES) {
         myFloat = 100.00;
     } else {
@@ -49,12 +51,14 @@
     NSLog(@"myFloat=%.2f", myFloat);
     
     //For loop
+    NSLog(@"FOR LOOP");
     for (int i = 0; i < 10; i++) {
         NSLog(@"i=%d", i);
     }
     
     //Nested loop
-    for(int i = 0; i < 10; i++){
+    NSLog(@"NESTED LOOP");
+    for(int i = 0; i < 4; i++){
         for (int a = 7; a > 3; a--) {
             NSLog(@"a=%d", a);
         }
@@ -62,6 +66,7 @@
     }
     
     //while loop
+    NSLog(@"WHILE LOOP");
     while(myFloat < 110){
         NSLog(@"myFloat=%f", myFloat);
         myFloat++;
