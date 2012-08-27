@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>APL.xcscheme</key>
+		<key>APL_Week1.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>3E5CAC4D15EC0564000D0890</key>
+		<key>3E5CAC7315EC0C1D000D0890</key>
 		<dict>
 			<key>primary</key>
 			<true/>

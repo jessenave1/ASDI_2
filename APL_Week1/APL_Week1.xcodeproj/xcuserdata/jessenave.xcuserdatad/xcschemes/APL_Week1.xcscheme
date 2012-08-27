@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3E5CAC4D15EC0564000D0890"
-               BuildableName = "APL.app"
-               BlueprintName = "APL"
-               ReferencedContainer = "container:APL.xcodeproj">
+               BlueprintIdentifier = "3E5CAC7315EC0C1D000D0890"
+               BuildableName = "APL_Week1.app"
+               BlueprintName = "APL_Week1"
+               ReferencedContainer = "container:APL_Week1.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3E5CAC4D15EC0564000D0890"
-            BuildableName = "APL.app"
-            BlueprintName = "APL"
-            ReferencedContainer = "container:APL.xcodeproj">
+            BlueprintIdentifier = "3E5CAC7315EC0C1D000D0890"
+            BuildableName = "APL_Week1.app"
+            BlueprintName = "APL_Week1"
+            ReferencedContainer = "container:APL_Week1.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -51,10 +51,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3E5CAC4D15EC0564000D0890"
-            BuildableName = "APL.app"
-            BlueprintName = "APL"
-            ReferencedContainer = "container:APL.xcodeproj">
+            BlueprintIdentifier = "3E5CAC7315EC0C1D000D0890"
+            BuildableName = "APL_Week1.app"
+            BlueprintName = "APL_Week1"
+            ReferencedContainer = "container:APL_Week1.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -69,10 +69,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3E5CAC4D15EC0564000D0890"
-            BuildableName = "APL.app"
-            BlueprintName = "APL"
-            ReferencedContainer = "container:APL.xcodeproj">
+            BlueprintIdentifier = "3E5CAC7315EC0C1D000D0890"
+            BuildableName = "APL_Week1.app"
+            BlueprintName = "APL_Week1"
+            ReferencedContainer = "container:APL_Week1.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

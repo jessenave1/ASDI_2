@@ -1,6 +1,6 @@
 //
 //  AppDelegate.m
-//  APL
+//  APL_Week1
 //
 //  Created by Jesse Nave on 8/27/12.
 //  Copyright (c) 2012 Jesse Nave. All rights reserved.
@@ -22,6 +22,32 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    //Declare my variables
+    float myFloat = 32.00;
+    bool myBool = NO;
+    char *myString = "Did the IF statement prove to be true?";
+    
+    //Log the float
+    NSLog(@"myFloat%.2f", myFloat);
+    
+    //cast to int and log
+    NSLog(@"myFloat%d", (int)myFloat);
+    
+    //AND OR comparison
+    if (((myFloat != 0 && (int)myFloat == 32) || (((int)myFloat < 100) && myFloat > 22))) {
+        myBool = YES;
+    }
+    NSLog(@"myString=%s, myBool=%c", myString, myBool);
+    
+    //If/else check
+    if (myBool == YES) {
+        myFloat = 100.00;
+    } else {
+        myFloat = 200.00;
+    }
+    NSLog(@"myFloat=%.2f", myFloat);
+    
     return YES;
 }
 
