@@ -25,7 +25,7 @@
     
     //Declare my variables
     float myFloat = 32.00;
-    bool myBool = NO;
+    BOOL myBool = NO;
     char *myString = "Did the IF statement prove to be true?";
     
     //Log the float
@@ -47,6 +47,25 @@
         myFloat = 200.00;
     }
     NSLog(@"myFloat=%.2f", myFloat);
+    
+    //For loop
+    for (int i = 0; i < 10; i++) {
+        NSLog(@"i=%d", i);
+    }
+    
+    //Nested loop
+    for(int i = 0; i < 10; i++){
+        while (i < 8) {
+            NSLog(@"i=%d", i);
+            i++;
+        }
+    }
+    
+    //while loop
+    while(myFloat < 110){
+        NSLog(@"myFloat=%f", myFloat);
+        myFloat++;
+    }
     
     return YES;
 }
