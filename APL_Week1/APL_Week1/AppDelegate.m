@@ -55,10 +55,10 @@
     
     //Nested loop
     for(int i = 0; i < 10; i++){
-        while (i < 8) {
-            NSLog(@"i=%d", i);
-            i++;
+        for (int a = 7; a > 3; a--) {
+            NSLog(@"a=%d", a);
         }
+        NSLog(@"i=%d", i);
     }
     
     //while loop
