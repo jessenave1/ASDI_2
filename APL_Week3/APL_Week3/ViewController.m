@@ -27,9 +27,9 @@
     
     int myInt = [self Add:(int) num1_1 numA:(int)num2_1 ];
     
-    NSString *myString2 = [[NSString alloc] initWithFormat:@"The Answer: %d", myInt];
-    
     NSNumber *myNum = [[NSNumber alloc] initWithInt:myInt];
+    
+    NSString *myString2 = [[NSString alloc] initWithFormat:@"The Answer: %d", myNum];
     
     BOOL comparing = [self Compare:num1_1 :num2_1];
     
