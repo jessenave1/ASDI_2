@@ -18,12 +18,33 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    NSString *myString = [self Append:(NSString*)@"Jesse" :(NSString*)@"Nave"];
+    
+    int intNum1 = 45;
+    int intNum2 = 63;
+    NSInteger num1_1 = intNum1;
+    NSInteger num2_1 = intNum2;
+    NSString *myString = [[NSString alloc] initWithString:@""];
+    
+    int myInt = [self Add:(int) num1_1 numA:(int)num2_1 ];
+    
+    NSString *myString2 = [[NSString alloc] initWithFormat:@"The Answer: %d", myInt];
+    
+    NSNumber *myNum = [[NSNumber alloc] initWithInt:myInt];
+    
+    BOOL comparing = [self Compare:num1_1 :num2_1];
+    
     
     UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"error" message:(NSString*)myString delegate:nil cancelButtonTitle:@"ok" otherButtonTitles:nil];
     
     if(alertView != nil){
         [alertView show];
+    }
+    
+    [self DisplayAlertWithString:myString2];
+    
+    if(comparing){
+        NSString *compared = [[NSString alloc] initWithFormat:@"%@ %d is the same as %d", comparing ? @"yes":@"no", num2_1, num1_1];
+        [self DisplayAlertWithString:compared];
     }
 }
 
@@ -38,17 +59,13 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
-- (int)Add:(int)num1 :(int)num2{
+- (int)Add:(int)num1 numA:(int)num2{
     
-    int answer;
-    
-    answer = num1 + num2;
-    
-    return answer;
+    return num1 + num2;
     
 }
 
--(bool)Compare:(int)num1 num2:(int)num2{
+-(bool)Compare:(NSInteger)num1 numA:(NSInteger)num2{
     
     bool answer = false;
     
@@ -63,12 +80,20 @@
 
 
 -(NSString*)Append:(NSString*)string1 string2:(NSString*)string2{
-    NSMutableString *answer;
-    answer = [NSMutableString stringWithCapacity:50];
-    [answer appendString:string1];
-    [answer appendString:string2];
-    NSString *string3 = (NSString*)answer;
+    
+    NSMutableString *string3 = [[NSMutableString alloc] initWithString:string1]; [string2 appendString:string2];
+    
     return string3;
+}
+
+-(void)DisplayAlertWithString:(NSString*)string4{
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"APL Week3"
+                                                    message:string4
+                                                   delegate:nil
+                                          cancelButtonTitle:@"ok"
+                                          otherButtonTitles:nil];
+    [alert show];
 }
 
 @end

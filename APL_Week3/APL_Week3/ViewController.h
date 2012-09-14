@@ -14,7 +14,7 @@
 }
 
 - (int)Add:(int)num1 :(int)num2;
--(bool)Compare:(int)num1:(int)num2;
--(NSString*)Append:(NSString*)string1:(NSString*)string2;
-
+-(bool)Compare:(NSInteger)num1:(NSInteger)num2;
+-(NSString*)Append:(NSString*)string1  string2:(NSString*)string2;
+-(void)DisplayAlertWithString:(NSString*)string4;
 @end
