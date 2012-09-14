@@ -65,12 +65,12 @@
     
 }
 
--(bool)Compare:(NSInteger)num1 numA:(NSInteger)num2{
+-(BOOL)Compare:(int)num1 numA:(int)num2{
     
-    bool answer = false;
+    bool answer = NO;
     
     if(num1 == num2){
-        answer = true;
+        answer = YES;
     }
     
     return answer;
