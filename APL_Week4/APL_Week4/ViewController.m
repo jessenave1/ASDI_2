@@ -25,7 +25,6 @@
     if (submit != nil)
     {
         submit.backgroundColor = [UIColor clearColor];
-        
         submit.text = @"Username: ";
         submit.textColor = [UIColor blueColor];
         
@@ -42,7 +41,7 @@
         button1.tintColor = [UIColor blueColor];
         button1.tag = myTag1;
         
-        [button1 addTarget:self action:(onClick:) forControlEvents:UIControlEventTouchUpInside];
+        [button1 addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
         [button1 setTitle:@"Please Login:" forState:UIControlStateNormal];
         [self.view addSubview:button1];
     }
@@ -55,7 +54,7 @@
         myDate.tag = myTag2;
         
         [myDate setTitle:@"View Current Date" forState:UIControlStateNormal];
-        [myDate addTarget:self action:@selector(onClick;) forControlEvents:UIControlEventTouchUpInside];
+        [myDate addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:myDate];
     }
     
@@ -64,26 +63,28 @@
     if (infoButton != nil) {
         infoButton.frame = CGRectMake(20.0f, 300.0f, 150.0f, 50.0f);
         infoButton.tag = myTag3;
-        [infoButton addTarget:self action:(onClick:) forControlEvents:UIControlEventTouchUpInside];
+        [infoButton addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:infoButton];
     }
     
-    userIdInput = [[UITextField alloc] initWithFrame:CGRectMake(110.0f, 20.0f, 200.0f, 40.0f)];
+    myInput = [[UITextField alloc] initWithFrame:CGRectMake(110.0f, 20.0f, 200.0f, 40.0f)];
     
-    if(userIdInput != nil)
+    if(myInput != nil)
     {
-        userIdInput.borderStyle = UITextBorderStyleBezel;
-        userIdInput.textColor = [UIColor blackColor];
-        userIdInput.backgroundColor = [UIColor whiteColor];
-        [self.view addSubview:userIdInput];
+        myInput.borderStyle = UITextBorderStyleBezel;
+        myInput.textColor = [UIColor blackColor];
+        myInput.backgroundColor = [UIColor whiteColor];
+        [self.view addSubview:myInput];
     }
-    userMsgLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 100.0f, 200.0f, 80.0f)];
-    if (userMsgLabel != nil) {
-        userMsgLabel.textColor = [UIColor blackColor];
-        userMsgLabel.backgroundColor = [UIColor whiteColor];
-        userMsgLabel.text = @"Enter Username: ";
-        [self.view addSubview:userMsgLabel];
+    myLabel1 = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 100.0f, 200.0f, 80.0f)];
+    if (myLabel1 != nil) {
+        myLabel1.textColor = [UIColor blackColor];
+        myLabel1.backgroundColor = [UIColor whiteColor];
+        myLabel1.text = @"Enter Username: ";
+        [self.view addSubview:myLabel1];
     }
+    myLabel2 = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 100.0f, 200.0f, 80.0f)];
+    
     
     
     
