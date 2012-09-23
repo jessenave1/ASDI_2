@@ -47,6 +47,27 @@
         [self.view addSubview:button1];
     }
     
+    UIButton *myDate = [UIButton buttonWithType:UIButtonTypeInfoLight];
+    
+    if (myDate != nil) {
+        myDate.tintColor = [UIColor blueColor];
+        myDate.frame = CGRectMake(20.0f, 300.0f, 150.0f, 50.0f);
+        myDate.tag = myTag2;
+        
+        [myDate setTitle:@"View Current Date" forState:UIControlStateNormal];
+        [myDate addTarget:self action:@selector(onClick;) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:myDate];
+    }
+    
+    UIButton *infoButton = [UIButton buttonWithType:UIButtonTypeInfoLight];
+    
+    if (infoButton != nil) {
+        infoButton.frame = CGRectMake(20.0f, 300.0f, 150.0f, 50.0f);
+        infoButton.tag = myTag3;
+        [infoButton addTarget:self action:(onClick:) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:infoButton];
+    }
+    
     userIdInput = [[UITextField alloc] initWithFrame:CGRectMake(110.0f, 20.0f, 200.0f, 40.0f)];
     
     if(userIdInput != nil)
@@ -56,6 +77,15 @@
         userIdInput.backgroundColor = [UIColor whiteColor];
         [self.view addSubview:userIdInput];
     }
+    userMsgLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 100.0f, 200.0f, 80.0f)];
+    if (userMsgLabel != nil) {
+        userMsgLabel.textColor = [UIColor blackColor];
+        userMsgLabel.backgroundColor = [UIColor whiteColor];
+        userMsgLabel.text = @"Enter Username: ";
+        [self.view addSubview:userMsgLabel];
+    }
+    
+    
     
        
 	// Do any additional setup after loading the view, typically from a nib.
