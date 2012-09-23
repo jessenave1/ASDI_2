@@ -13,6 +13,7 @@
     UITextField *myInput;
     UILabel *myLabel1;
     UILabel *myLabel2;
+    UILabel *myLabel3;
 }
 
 @end

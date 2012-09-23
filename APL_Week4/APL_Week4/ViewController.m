@@ -24,7 +24,7 @@ const int button3Tag = 103;
     
     self.view.backgroundColor = [UIColor blueColor];
     
-    UILabel *submit = [[UILabel alloc] initWithFrame:CGRectMake(30.0f, 20.0f, 80.0f, 20.0f)];
+    UILabel *submit = [[UILabel alloc] initWithFrame:CGRectMake(100.0f, 10.0f, 180.0f, 20.0f)];
     
     if (submit != nil)
     {
@@ -54,10 +54,10 @@ const int button3Tag = 103;
     
     if (myDate != nil) {
         myDate.tintColor = [UIColor blueColor];
-        myDate.frame = CGRectMake(50.0f, 300.0f, 150.0f, 50.0f);
+        myDate.frame = CGRectMake(50.0f, 250.0f, 150.0f, 50.0f);
         myDate.tag = button2Tag;
         
-        [myDate setTitle:@"View Current Date" forState:UIControlStateNormal];
+        [myDate setTitle:@"Current Date" forState:UIControlStateNormal];
         [myDate addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:myDate];
     }
@@ -65,13 +65,14 @@ const int button3Tag = 103;
     UIButton *infoButton = [UIButton buttonWithType:UIButtonTypeInfoLight];
     
     if (infoButton != nil) {
-        infoButton.frame = CGRectMake(20.0f, 300.0f, 150.0f, 50.0f);
+        infoButton.frame = CGRectMake(20.0f, 350.0f, 150.0f, 50.0f);
         infoButton.tag = button3Tag;
         [infoButton addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
+        [infoButton setTitle:@"Info" forState:UIControlStateNormal];
         [self.view addSubview:infoButton];
     }
     
-    myInput = [[UITextField alloc] initWithFrame:CGRectMake(110.0f, 20.0f, 200.0f, 40.0f)];
+    myInput = [[UITextField alloc] initWithFrame:CGRectMake(50.0f, 50.0f, 200.0f, 30.0f)];
     
     if(myInput != nil)
     {
@@ -87,14 +88,19 @@ const int button3Tag = 103;
         myLabel1.text = @"Enter Username: ";
         [self.view addSubview:myLabel1];
     }
-    myLabel2 = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 100.0f, 200.0f, 80.0f)];
+    myLabel2 = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 100.0f, 10.0f, 10.0f)];
     
     if (myLabel2 != nil) {
-        myLabel2.textColor = [UIColor redColor];
         myLabel2.backgroundColor = [UIColor whiteColor];
         [self.view addSubview:myLabel2];
     }
     
+    myLabel3 = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 100.0f, 10.0f, 10.0f)];
+    if(myLabel3 != nil)
+    {
+        myLabel3.backgroundColor = [UIColor clearColor];
+        [self.view addSubview:myLabel3];
+    }
     
        
 	// Do any additional setup after loading the view, typically from a nib.
@@ -152,7 +158,8 @@ const int button3Tag = 103;
             
             case button3Tag:
             
-            myLabel1.text = @"This application was written by: Jesse Nave";
+            myLabel3.text = @"This application was written by: Jesse Nave";
+            //myLabel3.numberOfLines = 2;
             
             break;
             
