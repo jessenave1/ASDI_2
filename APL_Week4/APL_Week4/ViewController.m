@@ -129,6 +129,7 @@ const int button3Tag = 103;
             {
                 myLabel3.text = @"You must enter a Username";
                 myLabel3.textColor = [UIColor redColor];
+                myLabel3.text = [myLabel3.text uppercaseString];
             }
             break;
             
@@ -138,7 +139,7 @@ const int button3Tag = 103;
             NSDateFormatter *format = [[NSDateFormatter alloc] init];
             if(format != nil)
             {
-                [format setDateFormat:@"mm dd, yy h:mm:ss"];
+                [format setDateFormat:@"MMMM dd, yyyy h:mm:ss"];
                 NSString *dateText = [[NSString alloc] initWithFormat:@"%@", [format stringFromDate:myDate]];
                 UIAlertView *myAlert = [[UIAlertView alloc] initWithTitle:@"Date: " message:dateText delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
                 if(myAlert != nil)
