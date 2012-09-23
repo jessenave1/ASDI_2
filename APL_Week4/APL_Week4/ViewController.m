@@ -22,7 +22,7 @@ const int button3Tag = 103;
 {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor blackColor];
+    self.view.backgroundColor = [UIColor blueColor];
     
     UILabel *submit = [[UILabel alloc] initWithFrame:CGRectMake(30.0f, 20.0f, 80.0f, 20.0f)];
     
@@ -30,7 +30,7 @@ const int button3Tag = 103;
     {
         submit.backgroundColor = [UIColor clearColor];
         submit.text = @"Username: ";
-        submit.textColor = [UIColor blueColor];
+        submit.textColor = [UIColor whiteColor];
         
         [self.view addSubview:submit];
     }
@@ -116,12 +116,12 @@ const int button3Tag = 103;
     switch (sender.tag)
     {
         case button1Tag:
-            
+        {
             NSString *myString = [myLabel2 text];
             
-            if([text length] > 0)
+            if([myString length] > 0)
             {
-                NSString *login = [[NSString alloc] initWithFormat:@"Login Successful: ",text];
+                NSString *login = [[NSString alloc] initWithFormat:@"Login Successful: ",myString];
                 myLabel2.text = login;
             }
             else
@@ -146,6 +146,7 @@ const int button3Tag = 103;
                 }
             }
         }
+        }
             break;
             
             case button3Tag:
@@ -156,7 +157,7 @@ const int button3Tag = 103;
             
         default:
         {
-            UIAlertView *error = [[[UIAlertView alloc] initWithTitle:@"Error" message:@"An error occured" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil]];
+            UIAlertView *error = [[UIAlertView alloc] initWithTitle:@"Error" message:@"An error occured" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
             if(error != nil)
             {
                 [error show];
