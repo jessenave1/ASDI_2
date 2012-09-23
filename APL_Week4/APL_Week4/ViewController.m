@@ -133,24 +133,35 @@ const int button3Tag = 103;
             
             case button2Tag:
         {
-            NSDate *myDate = [NSDate myDate];
+            NSDate *myDate = [NSDate date];
             NSDateFormatter *format = [[NSDateFormatter alloc] init];
             if(format != nil)
             {
                 [format setDateFormat:@"mm dd, yy h:mm:ss"];
                 NSString *dateText = [[NSString alloc] initWithFormat:@"%@", [format stringFromDate:myDate]];
-                UIAlertView *myAlert = [[[UIAlertView alloc] initWithTitle:@"Date: " message:dateText delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil]];
-                
+                UIAlertView *myAlert = [[UIAlertView alloc] initWithTitle:@"Date: " message:dateText delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+                if(myAlert != nil)
+                {
+                    [myAlert show];
+                }
             }
         }
             break;
             
             case button3Tag:
             
+            myLabel1.text = @"This application was written by: Jesse Nave";
+            
             break;
             
         default:
-            
+        {
+            UIAlertView *error = [[[UIAlertView alloc] initWithTitle:@"Error" message:@"An error occured" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil]];
+            if(error != nil)
+            {
+                [error show];
+            }
+        }
             break;
     }
 
