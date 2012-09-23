@@ -24,16 +24,6 @@ const int button3Tag = 103;
     
     self.view.backgroundColor = [UIColor blueColor];
     
-    UILabel *submit = [[UILabel alloc] initWithFrame:CGRectMake(100.0f, 10.0f, 180.0f, 20.0f)];
-    
-    if (submit != nil)
-    {
-        submit.backgroundColor = [UIColor clearColor];
-        submit.text = @"Username: ";
-        submit.textColor = [UIColor whiteColor];
-        
-        [self.view addSubview:submit];
-    }
     
     UIButton *button1 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     
@@ -41,12 +31,12 @@ const int button3Tag = 103;
         
     {
         
-        button1.frame = CGRectMake(200.0f, 50.0f, 100.0f, 40.0f);
+        button1.frame = CGRectMake(100.0f, 90.0f, 100.0f, 40.0f);
         button1.tintColor = [UIColor redColor];
         button1.tag = button1Tag;
         
         [button1 addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
-        [button1 setTitle:@"Please Login:" forState:UIControlStateNormal];
+        [button1 setTitle:@"Login" forState:UIControlStateNormal];
         [self.view addSubview:button1];
     }
     
@@ -81,25 +71,20 @@ const int button3Tag = 103;
         myInput.backgroundColor = [UIColor whiteColor];
         [self.view addSubview:myInput];
     }
-    myLabel1 = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 100.0f, 200.0f, 80.0f)];
+    myLabel1 = [[UILabel alloc] initWithFrame:CGRectMake(60.0f, 10.0f, 240.0f, 20.0f)];
     if (myLabel1 != nil) {
-        myLabel1.textColor = [UIColor blackColor];
-        myLabel1.backgroundColor = [UIColor whiteColor];
+        myLabel1.textColor = [UIColor whiteColor];
+        myLabel1.backgroundColor = [UIColor clearColor];
         myLabel1.text = @"Enter Username: ";
         [self.view addSubview:myLabel1];
     }
-    myLabel2 = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 100.0f, 10.0f, 10.0f)];
+    myLabel2 = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 410.0f, 300.0f, 40.0f)];
     
     if (myLabel2 != nil) {
-        myLabel2.backgroundColor = [UIColor whiteColor];
+        myLabel2.backgroundColor = [UIColor clearColor];
+        myLabel2.textColor = [UIColor yellowColor];
+        myLabel2.numberOfLines = 2;
         [self.view addSubview:myLabel2];
-    }
-    
-    myLabel3 = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 100.0f, 10.0f, 10.0f)];
-    if(myLabel3 != nil)
-    {
-        myLabel3.backgroundColor = [UIColor clearColor];
-        [self.view addSubview:myLabel3];
     }
     
        
@@ -128,13 +113,13 @@ const int button3Tag = 103;
             if([myString length] >= 1)
             {
                 NSString *login = [[NSString alloc] initWithFormat:@"Login Successful: ",myString];
-                myLabel2.textColor = [UIColor blackColor];
-                myLabel2.text = login;
+                myLabel1.textColor = [UIColor lightTextColor];
+                myLabel1.text = login;
             }
             else
             {
-                myLabel2.text = @"You must enter a Username";
-                myLabel2.textColor = [UIColor redColor];
+                myLabel1.text = @"You must enter a Username";
+                myLabel1.textColor = [UIColor redColor];
             }
             break;
             
@@ -158,8 +143,8 @@ const int button3Tag = 103;
             
             case button3Tag:
             
-            myLabel3.text = @"This application was written by: Jesse Nave";
-            //myLabel3.numberOfLines = 2;
+            myLabel2.text = @"This application was written by: Jesse Nave";
+            //myLabel2.numberOfLines = 2;
             
             break;
             
