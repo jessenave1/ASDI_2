@@ -42,7 +42,7 @@ const int button3Tag = 103;
     {
         
         button1.frame = CGRectMake(200.0f, 50.0f, 100.0f, 40.0f);
-        button1.tintColor = [UIColor blueColor];
+        button1.tintColor = [UIColor redColor];
         button1.tag = button1Tag;
         
         [button1 addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
@@ -54,7 +54,7 @@ const int button3Tag = 103;
     
     if (myDate != nil) {
         myDate.tintColor = [UIColor blueColor];
-        myDate.frame = CGRectMake(20.0f, 300.0f, 150.0f, 50.0f);
+        myDate.frame = CGRectMake(50.0f, 300.0f, 150.0f, 50.0f);
         myDate.tag = button2Tag;
         
         [myDate setTitle:@"View Current Date" forState:UIControlStateNormal];
@@ -117,7 +117,7 @@ const int button3Tag = 103;
     {
         case button1Tag:
         {
-            NSString *myString = [myLabel2 text];
+            NSString *myString = [myLabel1 text];
             
             if([myString length] > 0)
             {
