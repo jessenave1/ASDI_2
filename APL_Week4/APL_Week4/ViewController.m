@@ -32,6 +32,31 @@
         [self.view addSubview:submit];
     }
     
+    UIButton *button1 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    
+    if(button1 != nil)
+        
+    {
+        
+        button1.frame = CGRectMake(200.0f, 50.0f, 100.0f, 40.0f);
+        button1.tintColor = [UIColor blueColor];
+        button1.tag = myTag1;
+        
+        [button1 addTarget:self action:(onClick:) forControlEvents:UIControlEventTouchUpInside];
+        [button1 setTitle:@"Please Login:" forState:UIControlStateNormal];
+        [self.view addSubview:button1];
+    }
+    
+    userIdInput = [[UITextField alloc] initWithFrame:CGRectMake(110.0f, 20.0f, 200.0f, 40.0f)];
+    
+    if(userIdInput != nil)
+    {
+        userIdInput.borderStyle = UITextBorderStyleBezel;
+        userIdInput.textColor = [UIColor blackColor];
+        userIdInput.backgroundColor = [UIColor whiteColor];
+        [self.view addSubview:userIdInput];
+    }
+    
        
 	// Do any additional setup after loading the view, typically from a nib.
 }
