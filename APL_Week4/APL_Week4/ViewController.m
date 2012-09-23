@@ -117,11 +117,12 @@ const int button3Tag = 103;
     {
         case button1Tag:
         {
-            NSString *myString = [myLabel1 text];
+            NSString *myString = [myInput text];
             
-            if([myString length] > 0)
+            if([myString length] >= 1)
             {
                 NSString *login = [[NSString alloc] initWithFormat:@"Login Successful: ",myString];
+                myLabel2.textColor = [UIColor blackColor];
                 myLabel2.text = login;
             }
             else
