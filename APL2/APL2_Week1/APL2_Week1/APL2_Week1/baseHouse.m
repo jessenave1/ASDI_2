@@ -21,6 +21,11 @@
         instructions = nil;
     }
     return self;
+};
+
+-(void)calculateBuildingTime
+{
+    NSLog(@"It will take %i minutes to build this house.", buildingTimeMinutes);
 }
 
 @end

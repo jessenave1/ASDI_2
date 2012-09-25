@@ -10,4 +10,21 @@
 
 @interface brickHouse : baseHouse
 
+{
+    int brickType;
+}
+
+typedef enum
+{
+ 
+    REGULAR,
+    QUEEN,
+    VINTAGE
+    
+}brickType;
+
+@property int brickType;
+@property int squareFootage;
+@property int totalBuildTime;
+
 @end

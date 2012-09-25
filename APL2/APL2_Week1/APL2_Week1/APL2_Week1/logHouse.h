@@ -10,4 +10,9 @@
 
 @interface logHouse : baseHouse
 
+@property int logs;
+@property int timePerLog;
+
+
+
 @end
