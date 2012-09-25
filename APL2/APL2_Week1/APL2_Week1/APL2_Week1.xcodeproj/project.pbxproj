@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E0172C91612628900CBF9AF /* houseFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0172C81612628900CBF9AF /* houseFactory.m */; };
+		3E0172CD161262C400CBF9AF /* baseHouse.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0172CC161262C400CBF9AF /* baseHouse.m */; };
+		3E0172D01612630000CBF9AF /* logHouse.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0172CF1612630000CBF9AF /* logHouse.m */; };
+		3E0172D31612632200CBF9AF /* brickHouse.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0172D21612632200CBF9AF /* brickHouse.m */; };
 		3E9F7F84161075DC0002084E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9F7F83161075DC0002084E /* UIKit.framework */; };
 		3E9F7F86161075DC0002084E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9F7F85161075DC0002084E /* Foundation.framework */; };
 		3E9F7F88161075DC0002084E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9F7F87161075DC0002084E /* CoreGraphics.framework */; };
@@ -18,6 +22,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E0172C71612628900CBF9AF /* houseFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = houseFactory.h; sourceTree = "<group>"; };
+		3E0172C81612628900CBF9AF /* houseFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = houseFactory.m; sourceTree = "<group>"; };
+		3E0172CB161262C400CBF9AF /* baseHouse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = baseHouse.h; sourceTree = "<group>"; };
+		3E0172CC161262C400CBF9AF /* baseHouse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = baseHouse.m; sourceTree = "<group>"; };
+		3E0172CE1612630000CBF9AF /* logHouse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = logHouse.h; sourceTree = "<group>"; };
+		3E0172CF1612630000CBF9AF /* logHouse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = logHouse.m; sourceTree = "<group>"; };
+		3E0172D11612632200CBF9AF /* brickHouse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = brickHouse.h; sourceTree = "<group>"; };
+		3E0172D21612632200CBF9AF /* brickHouse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = brickHouse.m; sourceTree = "<group>"; };
 		3E9F7F7F161075DC0002084E /* APL2_Week1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APL2_Week1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E9F7F83161075DC0002084E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3E9F7F85161075DC0002084E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -83,6 +95,14 @@
 				3E9F7F96161075DC0002084E /* ViewController.m */,
 				3E9F7F98161075DC0002084E /* ViewController.xib */,
 				3E9F7F8A161075DC0002084E /* Supporting Files */,
+				3E0172C71612628900CBF9AF /* houseFactory.h */,
+				3E0172C81612628900CBF9AF /* houseFactory.m */,
+				3E0172CB161262C400CBF9AF /* baseHouse.h */,
+				3E0172CC161262C400CBF9AF /* baseHouse.m */,
+				3E0172CE1612630000CBF9AF /* logHouse.h */,
+				3E0172CF1612630000CBF9AF /* logHouse.m */,
+				3E0172D11612632200CBF9AF /* brickHouse.h */,
+				3E0172D21612632200CBF9AF /* brickHouse.m */,
 			);
 			path = APL2_Week1;
 			sourceTree = "<group>";
@@ -164,6 +184,10 @@
 				3E9F7F90161075DC0002084E /* main.m in Sources */,
 				3E9F7F94161075DC0002084E /* AppDelegate.m in Sources */,
 				3E9F7F97161075DC0002084E /* ViewController.m in Sources */,
+				3E0172C91612628900CBF9AF /* houseFactory.m in Sources */,
+				3E0172CD161262C400CBF9AF /* baseHouse.m in Sources */,
+				3E0172D01612630000CBF9AF /* logHouse.m in Sources */,
+				3E0172D31612632200CBF9AF /* brickHouse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +301,7 @@
 				3E9F7F9F161075DC0002084E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
