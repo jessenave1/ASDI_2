@@ -24,4 +24,21 @@
     return self;
 };
 
+-(void)calculateBuildingTime
+{
+    if (brickType == REGULAR) {
+        [self setBuildingTimeMinutes:(squareFootage * .2)];
+    }else if (brickType == QUEEN)
+    {
+        [self setBuildingTimeMinutes:(squareFootage * .4)];
+    }else if (brickType == VINTAGE)
+    {
+        [self setBuildingTimeMinutes:(squareFootage * .6)];
+    }else
+    {
+        NSLog(@"You need to specify a valid brick type.");
+    }
+    
+    NSLog(@"It will take %i minutes to build this house", self.buildingTimeMinutes);
+}
 @end

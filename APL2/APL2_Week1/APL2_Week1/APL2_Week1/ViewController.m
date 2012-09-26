@@ -16,6 +16,38 @@
 
 - (void)viewDidLoad
 {
+    
+    logHouse *myLogHouse = (logHouse *)[houseFactory createNewHouse:LOG];
+    [myLogHouse setLogs:2500];
+    
+    if (myLogHouse != nil) {
+        NSArray *logMaterials = [[NSArray alloc] initWithObjects:@"logs", @"shingles", nil];
+        [myLogHouse setMaterials:logMaterials];
+        
+        NSString *logInstructions = @"See blueprint on site.";
+        [myLogHouse setInstructions:logInstructions];
+        
+        NSLog(@"You've built a log house with the materials %@", [myLogHouse materials]);
+        NSLog(@"%@", myLogHouse.instructions);
+        
+        [myLogHouse calculateBuildingTime];
+    }
+    
+    brickHouse *myBrickHouse = (brickHouse*)[houseFactory createNewHouse:BRICK];
+    
+    if(myBrickHouse != nil)
+    {
+        [myBrickHouse setBrickType:QUEEN];
+        [myBrickHouse setSquareFootage:3500];
+        [myBrickHouse setInstructions:@""];
+        
+        [myBrickHouse calculateBuildingTime];
+        int myHouseBuildingTime = myBrickHouse.buildingTimeMinutes;
+        NSLog(@"%i", myHouseBuildingTime);
+    }
+    
+    
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }

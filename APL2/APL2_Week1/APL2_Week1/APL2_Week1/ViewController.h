@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "houseFactory.h"
 
 @interface ViewController : UIViewController
 

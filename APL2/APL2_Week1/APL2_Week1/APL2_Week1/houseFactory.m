@@ -12,7 +12,17 @@
 
 +(baseHouse *)createNewHouse:(int)houseType
 {
-    return [[brickHouse alloc] init];
+    if (houseType == LOG) {
+        return [[logHouse alloc] init];
+    }
+    
+    else if (houseType == BRICK)
+    
+    {
+        return [[brickHouse alloc] init];
+    }
+    
+    else return nil;
 }
 
 @end
