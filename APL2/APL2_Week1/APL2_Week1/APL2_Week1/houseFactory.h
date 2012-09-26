@@ -11,6 +11,7 @@
 #import "baseHouse.h"
 #import "logHouse.h"
 #import "brickHouse.h"
+#import "adobeHouse.h"
 
 @interface houseFactory : NSObject
 

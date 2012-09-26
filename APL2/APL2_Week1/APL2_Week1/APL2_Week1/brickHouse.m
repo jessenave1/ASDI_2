@@ -19,7 +19,7 @@
         [self setBuildingTimeMinutes:0];
         [self setBrickType:QUEEN];
         [self setSquareFootage:4000];
-        NSLog(@"You built a house!");
+        NSLog(@"You built a brick house!");
     }
     return self;
 };
@@ -39,6 +39,6 @@
         NSLog(@"You need to specify a valid brick type.");
     }
     
-    NSLog(@"It will take %i minutes to build this house", self.buildingTimeMinutes);
+    NSLog(@"It will take %i minutes to build this brick house", self.buildingTimeMinutes);
 }
 @end

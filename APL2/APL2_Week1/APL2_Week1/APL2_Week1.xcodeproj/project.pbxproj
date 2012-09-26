@@ -11,6 +11,7 @@
 		3E0172CD161262C400CBF9AF /* baseHouse.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0172CC161262C400CBF9AF /* baseHouse.m */; };
 		3E0172D01612630000CBF9AF /* logHouse.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0172CF1612630000CBF9AF /* logHouse.m */; };
 		3E0172D31612632200CBF9AF /* brickHouse.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0172D21612632200CBF9AF /* brickHouse.m */; };
+		3E98FCEE1613340A00A3C39C /* adobeHouse.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E98FCED1613340900A3C39C /* adobeHouse.m */; };
 		3E9F7F84161075DC0002084E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9F7F83161075DC0002084E /* UIKit.framework */; };
 		3E9F7F86161075DC0002084E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9F7F85161075DC0002084E /* Foundation.framework */; };
 		3E9F7F88161075DC0002084E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9F7F87161075DC0002084E /* CoreGraphics.framework */; };
@@ -30,6 +31,8 @@
 		3E0172CF1612630000CBF9AF /* logHouse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = logHouse.m; sourceTree = "<group>"; };
 		3E0172D11612632200CBF9AF /* brickHouse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = brickHouse.h; sourceTree = "<group>"; };
 		3E0172D21612632200CBF9AF /* brickHouse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = brickHouse.m; sourceTree = "<group>"; };
+		3E98FCEC1613340900A3C39C /* adobeHouse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = adobeHouse.h; sourceTree = "<group>"; };
+		3E98FCED1613340900A3C39C /* adobeHouse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = adobeHouse.m; sourceTree = "<group>"; };
 		3E9F7F7F161075DC0002084E /* APL2_Week1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APL2_Week1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E9F7F83161075DC0002084E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3E9F7F85161075DC0002084E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -103,6 +106,8 @@
 				3E0172CF1612630000CBF9AF /* logHouse.m */,
 				3E0172D11612632200CBF9AF /* brickHouse.h */,
 				3E0172D21612632200CBF9AF /* brickHouse.m */,
+				3E98FCEC1613340900A3C39C /* adobeHouse.h */,
+				3E98FCED1613340900A3C39C /* adobeHouse.m */,
 			);
 			path = APL2_Week1;
 			sourceTree = "<group>";
@@ -188,6 +193,7 @@
 				3E0172CD161262C400CBF9AF /* baseHouse.m in Sources */,
 				3E0172D01612630000CBF9AF /* logHouse.m in Sources */,
 				3E0172D31612632200CBF9AF /* brickHouse.m in Sources */,
+				3E98FCEE1613340A00A3C39C /* adobeHouse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

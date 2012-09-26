@@ -22,6 +22,11 @@
         return [[brickHouse alloc] init];
     }
     
+    else if (houseType == ADOBE)
+    {
+        return [[adobeHouse alloc] init];
+    }
+    
     else return nil;
 }
 

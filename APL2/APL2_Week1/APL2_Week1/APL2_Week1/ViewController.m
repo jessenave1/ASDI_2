@@ -46,6 +46,17 @@
         NSLog(@"%i", myHouseBuildingTime);
     }
     
+    adobeHouse *myAdobeHouse = (adobeHouse*)[houseFactory createNewHouse:ADOBE];
+    if(myAdobeHouse != nil)
+    {
+        [myAdobeHouse setSquareFootage:2400];
+        [myAdobeHouse setInstructions:@"Mix and stack mud."];
+        
+        [myAdobeHouse calculateBuildingTime];
+        int myAdobeBuildingTime = myAdobeHouse.buildingTimeMinutes;
+        NSLog(@"%i", myAdobeBuildingTime);
+    }
+    
     
     
     [super viewDidLoad];

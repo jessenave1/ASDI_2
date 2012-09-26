@@ -27,6 +27,6 @@
 -(void)calculateBuildingTime
 {
     [self setBuildingTimeMinutes:(logs * timePerLog)];
-    NSLog(@"It will take %i minutes to build this house.", self.buildingTimeMinutes);
+    NSLog(@"It will take %i minutes to build this log house.", self.buildingTimeMinutes);
 }
 @end

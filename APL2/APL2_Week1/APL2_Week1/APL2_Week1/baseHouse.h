@@ -16,7 +16,8 @@
 typedef enum
 {
     BRICK,
-    LOG
+    LOG,
+    ADOBE
 }houseEnum;
 
 @property NSArray *materials;
