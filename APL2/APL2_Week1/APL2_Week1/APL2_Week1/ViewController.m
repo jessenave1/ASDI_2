@@ -21,6 +21,7 @@ const int button3Tag = 103;
 
 - (void)viewDidLoad
 {
+    //create loghouse and set log count
     
     logHouse *myLogHouse = (logHouse *)[houseFactory createNewHouse:LOG];
     [myLogHouse setLogs:2500];
@@ -62,39 +63,32 @@ const int button3Tag = 103;
         NSLog(@"%i", myAdobeBuildingTime);
     }
     
-    UIButton *logHouse = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     
-    if (logHouse != nil) {
-        logHouse.tintColor = [UIColor whiteColor];
-        logHouse.frame = CGRectMake(10.0f, 250.0f, 100.0f, 50.0f);
-        logHouse.tag = button1Tag;
-        
-        [logHouse setTitle:@"Log House" forState:UIControlStateNormal];
-        [logHouse addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
-        [self.view addSubview:logHouse];
+    myLabel1 = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 10.0f, 100.0f, 20.0f)];
+    if (myLabel1 != nil) {
+        myLabel1.textColor = [UIColor blackColor];
+        myLabel1.backgroundColor = [UIColor clearColor];
+        myLabel1.text = @"Log House: ";
+        [self.view addSubview:myLabel1];
     }
+    myLabel2 = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 80.0f, 300.0f, 300.0f)];
     
-    UIButton *brickHouse = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    
-    if (brickHouse != nil) {
-        brickHouse.tintColor = [UIColor whiteColor];
-        brickHouse.frame = CGRectMake(10.0f, 250.0f, 100.0f, 50.0f);
-        brickHouse.tag = button2Tag;
-        
-        [brickHouse setTitle:@"Brick House" forState:UIControlStateNormal];
-        [brickHouse addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
-        [self.view addSubview:brickHouse];
+    if (myLabel2 != nil) {
+        myLabel2.backgroundColor = [UIColor blueColor];
+        myLabel2.textColor = [UIColor redColor];
+        myLabel2.textAlignment = UITextAlignmentLeft;
+        myLabel2.numberOfLines = 3;
+        myLabel2.text = [NSString stringWithFormat:@"The %@ are used and you must %@.", [myLogHouse materials], [myLogHouse instructions]];
+        [self.view addSubview:myLabel2];
     }
-    UIButton *adobeHouse = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    
-    if (adobeHouse != nil) {
-        adobeHouse.tintColor = [UIColor whiteColor];
-        adobeHouse.frame = CGRectMake(10.0f, 250.0f, 100.0f, 50.0f);
-        adobeHouse.tag = button3Tag;
-        
-        [adobeHouse setTitle:@"Adobe House" forState:UIControlStateNormal];
-        [adobeHouse addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
-        [self.view addSubview:adobeHouse];
+    myLabel3 = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 300.0f, 320.0f, 60.0f)];
+    if (myLabel3 != nil)
+    {
+        myLabel3.backgroundColor = [UIColor lightGrayColor];
+        myLabel3.textColor = [UIColor blueColor];
+        myLabel3.text = @"Please enter Username";
+        myLabel3.textAlignment = UITextAlignmentCenter;
+        [self.view addSubview:myLabel3];
     }
     
     [super viewDidLoad];
