@@ -14,10 +14,6 @@
 
 @implementation ViewController
 
-const int button1Tag = 101;
-const int button2Tag = 102;
-const int button3Tag = 103;
-
 
 - (void)viewDidLoad
 {
@@ -123,7 +119,7 @@ const int button3Tag = 103;
     {
         myLabel6.backgroundColor = [UIColor clearColor];
         myLabel6.textColor = [UIColor whiteColor];
-        myLabel6.text = [NSString stringWithFormat:@"The house is %d square feel, and require %d minutes to build.", [myAdobeHouse squareFootage], [myAdobeHouse buildingTimeMinutes]];
+        myLabel6.text = [NSString stringWithFormat:@"The house is %d square feet, and require %d minutes to build.", [myAdobeHouse squareFootage], [myAdobeHouse buildingTimeMinutes]];
         [myLabel6 setNumberOfLines:0];
         [myLabel6 sizeToFit];
         [self.view addSubview:myLabel6];
