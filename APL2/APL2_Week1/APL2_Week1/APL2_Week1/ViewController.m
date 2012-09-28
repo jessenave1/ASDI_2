@@ -99,8 +99,8 @@ const int button3Tag = 103;
     myLabel4 = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 180.0f, 300.0f, 300.0f)];
     if(myLabel4 != nil)
     {
-        myLabel4.backgroundColor = [UIColor redColor];
-        myLabel4.textColor = [UIColor blackColor];
+        myLabel4.backgroundColor = [UIColor clearColor];
+        myLabel4.textColor = [UIColor whiteColor];
         //myLabel4.text = @"Hello world";
         myLabel4.text = [NSString stringWithFormat:@"The house will use %i bricks, and require %d minutes to build.", [myBrickHouse brickType], [myBrickHouse buildingTimeMinutes]];
         [myLabel4 setNumberOfLines:0];
@@ -108,6 +108,27 @@ const int button3Tag = 103;
         [self.view addSubview:myLabel4];
     }
     
+    myLabel5 = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 230.0f, 120.0f, 20.0f)];
+    if (myLabel5 != nil)
+    {
+        myLabel5.backgroundColor = [UIColor clearColor];
+        myLabel5.textColor = [UIColor blackColor];
+        myLabel5.text = @"Adobe House: ";
+        [self.view addSubview:myLabel5];
+    }
+    
+    myLabel6 = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 250.0f, 300.0f, 300.0f)];
+    if(myLabel6 != nil)
+
+    {
+        myLabel6.backgroundColor = [UIColor clearColor];
+        myLabel6.textColor = [UIColor whiteColor];
+        myLabel6.text = [NSString stringWithFormat:@"The house is %d square feel, and require %d minutes to build.", [myAdobeHouse squareFootage], [myAdobeHouse buildingTimeMinutes]];
+        [myLabel6 setNumberOfLines:0];
+        [myLabel6 sizeToFit];
+        [self.view addSubview:myLabel6];
+    }
+
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
