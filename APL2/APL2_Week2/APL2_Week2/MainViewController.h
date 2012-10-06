@@ -9,11 +9,13 @@
 #import "FlipsideViewController.h"
 
 @interface MainViewController : UIViewController <FlipsideViewControllerDelegate>
-
 {
-    UILabel *myLabel1;
+    IBOutlet UITextField *tf1;
+    int firstNum;
+    int secondNum;
+    int answer;
 }
 
 - (IBAction)showInfo:(id)sender;
-
+- (IBAction)onClick:(id)sender;
 @end

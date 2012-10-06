@@ -14,18 +14,12 @@
 
 @implementation MainViewController
 
+
 - (void)viewDidLoad
 {
-    
-    
-    myLabel1 = [[UILabel alloc] initWithFrame:CGRectMake(20.0f, 380.0f, 200.0f, 20.0f)];
-    if (myLabel1 != nil) {
-        myLabel1.textColor = [UIColor blackColor];
-        myLabel1.backgroundColor = [UIColor clearColor];
-        myLabel1.text = @"Background Color ";
-        [self.view addSubview:myLabel1];
-    }
-    
+    int firstNum;
+    int secondNum;
+    int answer;
     
     [super viewDidLoad];
     
@@ -59,4 +53,61 @@
     [self presentModalViewController:controller animated:YES];
 }
 
+- (IBAction)onClick:(id)sender
+{
+    UIButton *btn = (UIButton*)sender;
+    if(btn != nil)
+    {        
+        if (btn.tag == 0) {
+            tf1.text = (@"0");
+            firstNum = 0;
+        } else if(btn.tag == 1)
+        {
+            tf1.text = @"1";
+            firstNum = 1;
+        } else if(btn.tag == 2)
+        {
+            tf1.text = @"2";
+            firstNum = 2;
+        } else if(btn.tag == 3)
+        {
+            tf1.text = @"3";
+            firstNum = 3;
+        } else if(btn.tag == 4)
+        {
+            tf1.text = @"4";
+            firstNum = 4;
+        } else if(btn.tag == 5)
+        {
+            tf1.text = @"5";
+            firstNum = 5;
+        } else if(btn.tag == 6)
+        {
+            tf1.text = @"6";
+            firstNum = 6;
+        } else if(btn.tag == 7)
+        {
+            tf1.text = @"7";
+            firstNum = 7;
+        } else if(btn.tag == 8)
+        {
+            tf1.text = @"8";
+            firstNum = 8;
+        } else if(btn.tag == 9)
+        {
+            tf1.text = @"9";
+            firstNum = 9;
+        } else if(btn.tag == 10)
+        {
+            secondNum = firstNum;
+            
+        } else if(btn.tag == 11)
+{
+    answer = (firstNum + secondNum);
+    NSString *mystring = [NSString stringWithFormat:@"%d",answer];
+    tf1.text = mystring;
+}
+
+    }
+}
 @end
