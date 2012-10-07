@@ -25,6 +25,9 @@
     IBOutlet UIButton *btn10;
     IBOutlet UIButton *btn11;
     IBOutlet UIButton *btn12;
+    IBOutlet UIButton *iBtn;
+    IBOutlet UISegmentedControl *sc;
+    IBOutlet UIView *mainView;
     //variables
     int firstNum;
     int secondNum;
@@ -34,4 +37,5 @@
 - (IBAction)showInfo:(id)sender;
 - (IBAction)onClick:(id)sender;
 - (IBAction)onSwitched:(id)sender;
+- (IBAction)onChanged:(id)sender;
 @end

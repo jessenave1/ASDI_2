@@ -192,6 +192,34 @@
         } else {
             btn12.enabled = false;
         }
+        if (thisSwitch.isOn) {
+            sc.enabled = true;
+        } else {
+            sc.enabled = false;
+        }
+        if (thisSwitch.isOn) {
+            iBtn.enabled = true;
+        } else {
+            iBtn.enabled = false;
+        }
+        
+    }
+}
+//segment Control setup to change screen color
+- (IBAction)onChanged:(id)sender
+{
+    UISegmentedControl *segmentControl = (UISegmentedControl*)sender;
+    if(segmentControl != nil)
+    {
+        int selectedIndex = segmentControl.selectedSegmentIndex;
+        if (selectedIndex == 0) {
+            mainView.backgroundColor = [UIColor whiteColor];
+        } else if(selectedIndex == 1){
+            mainView.backgroundColor = [UIColor blueColor];
+        }else
+        {
+            mainView.backgroundColor = [UIColor greenColor];
+        }
     }
 }
 @end

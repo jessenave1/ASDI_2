@@ -61,7 +61,7 @@
 							</object>
 						</array>
 					</object>
-					<object class="IBUILabel" id="571120978">
+					<object class="IBUILabel" id="489676362">
 						<reference key="NSNextResponder" ref="249263867"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{58, 198}, {205, 63}}</string>
@@ -162,7 +162,7 @@
 						<reference key="object" ref="249263867"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="871675769"/>
-							<reference ref="571120978"/>
+							<reference ref="489676362"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -189,7 +189,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">47</int>
-						<reference key="object" ref="571120978"/>
+						<reference key="object" ref="489676362"/>
 						<reference key="parent" ref="249263867"/>
 					</object>
 				</array>
