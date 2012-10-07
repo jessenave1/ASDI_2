@@ -17,6 +17,7 @@
 		3EB629D71619C161002123C1 /* FlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB629D61619C161002123C1 /* FlipsideViewController.m */; };
 		3EB629DA1619C161002123C1 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EB629D81619C161002123C1 /* MainViewController.xib */; };
 		3EB629DD1619C161002123C1 /* FlipsideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EB629DB1619C161002123C1 /* FlipsideViewController.xib */; };
+		3EFB32871620FDDD00D13DB2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EFB32861620FDDD00D13DB2 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		3EB629D61619C161002123C1 /* FlipsideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlipsideViewController.m; sourceTree = "<group>"; };
 		3EB629D91619C161002123C1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainViewController.xib; sourceTree = "<group>"; };
 		3EB629DC1619C161002123C1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FlipsideViewController.xib; sourceTree = "<group>"; };
+		3EFB32861620FDDD00D13DB2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 		3EB629B11619C161002123C1 = {
 			isa = PBXGroup;
 			children = (
+				3EFB32861620FDDD00D13DB2 /* Default-568h@2x.png */,
 				3EB629C61619C161002123C1 /* APL2_Week2 */,
 				3EB629BF1619C161002123C1 /* Frameworks */,
 				3EB629BD1619C161002123C1 /* Products */,
@@ -160,6 +163,7 @@
 				3EB629CB1619C161002123C1 /* InfoPlist.strings in Resources */,
 				3EB629DA1619C161002123C1 /* MainViewController.xib in Resources */,
 				3EB629DD1619C161002123C1 /* FlipsideViewController.xib in Resources */,
+				3EFB32871620FDDD00D13DB2 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +299,7 @@
 				3EB629E21619C161002123C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
