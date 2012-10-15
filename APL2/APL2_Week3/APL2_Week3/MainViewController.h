@@ -13,12 +13,13 @@
     IBOutlet UIScrollView *scrollview;
     IBOutlet UILabel *noteLabel;
     IBOutlet UILabel *dateLabel;
-    NSString *passedValue;
     NSDate *passedDate;
+    NSString *passedString;
 }
 @property (nonatomic, retain)NSDate *passedDate;
-@property (nonatomic, retain)NSString *passedValue;
-
+@property (nonatomic, retain)NSString *passedString;
+@property (nonatomic, retain)UILabel *noteLabel;
+@property (nonatomic, retain)UILabel *dateLabel;
 - (IBAction)showInfo:(id)sender;
 
 @end

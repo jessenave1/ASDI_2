@@ -7,14 +7,16 @@
 //
 
 #import "FlipsideViewController.h"
-
 @interface FlipsideViewController ()
 
 @end
 
 @implementation FlipsideViewController
 
-@synthesize passedValue;
+@synthesize passedDate;
+@synthesize passedString;
+@synthesize tf1;
+@synthesize pickerView;
 
 - (void)viewDidLoad
 {
@@ -38,17 +40,24 @@
 
 - (IBAction)onClick:(id)sender
 {
-    if(pickerView != nil)
-    {
-    NSDate *date = pickerView.date;
     
-    NSLog(@"%@", date);
-    }
 }
 
 - (IBAction)onHide:(id)sender
 {
     [self.view endEditing:YES];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
+- (BOOL)textFieldShouldEndEditing:(UITextField *)textField
+{
+    self.passedString = tf1.text;
+    self.passedDate = pickerView.date;
+    return YES;
 }
 
 @end

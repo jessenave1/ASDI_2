@@ -13,14 +13,14 @@
 @end
 
 @implementation MainViewController
-@synthesize passedValue;
+
+@synthesize passedString;
 @synthesize passedDate;
+@synthesize noteLabel;
+@synthesize dateLabel;
 
 - (void)viewDidLoad
 {
-    noteLabel.text = passedValue;
-    dateLabel.text = [NSDateFormatter localizedStringFromDate:passedDate dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterMediumStyle];
-    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -44,6 +44,12 @@
     controller.delegate = self;
     controller.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     [self presentViewController:controller animated:YES completion:nil];
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.noteLabel setText:self.passedString];
 }
 
 @end

@@ -11,7 +11,6 @@
 #import "MainViewController.h"
 
 @implementation AppDelegate
-
 - (void)dealloc
 {
     [_window release];
