@@ -48,6 +48,7 @@
 						<string key="NSFrameSize">{320, 44}</string>
 						<reference key="NSSuperview" ref="249263867"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="925159812"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -72,6 +73,7 @@
 						<string key="NSFrame">{{28, 98}, {60, 44}}</string>
 						<reference key="NSSuperview" ref="249263867"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="867913272"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -107,6 +109,7 @@
 						<string key="NSFrame">{{149, 98}, {139, 44}}</string>
 						<reference key="NSSuperview" ref="249263867"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="334777518"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -129,6 +132,7 @@
 						<string key="NSFrame">{{46, 162}, {210, 40}}</string>
 						<reference key="NSSuperview" ref="249263867"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="77955716"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -160,6 +164,7 @@
 						<string key="NSFrame">{{46, 201}, {242, 30}}</string>
 						<reference key="NSSuperview" ref="249263867"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="752732564"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -270,12 +275,71 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA</b
 					<int key="connectionID">41</int>
 				</object>
 				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">pickerView</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="752732564"/>
+					</object>
+					<int key="connectionID">77</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">save</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="925159812"/>
+					</object>
+					<int key="connectionID">78</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">tf1</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="77955716"/>
+					</object>
+					<int key="connectionID">79</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">hideKeyboard</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="867913272"/>
+					</object>
+					<int key="connectionID">80</int>
+				</object>
+				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">done:</string>
 						<reference key="source" ref="854562692"/>
 						<reference key="destination" ref="372490531"/>
 					</object>
 					<int key="connectionID">46</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">onClick:</string>
+						<reference key="source" ref="925159812"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">75</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">done:</string>
+						<reference key="source" ref="925159812"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">76</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">onHide:</string>
+						<reference key="source" ref="867913272"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">81</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -811,24 +875,56 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA</b
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">74</int>
+			<int key="maxID">81</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<object class="IBPartialClassDescription">
 					<string key="className">FlipsideViewController</string>
 					<string key="superclassName">UIViewController</string>
-					<object class="NSMutableDictionary" key="actions">
-						<string key="NS.key.0">done:</string>
-						<string key="NS.object.0">id</string>
-					</object>
-					<object class="NSMutableDictionary" key="actionInfosByName">
-						<string key="NS.key.0">done:</string>
-						<object class="IBActionInfo" key="NS.object.0">
+					<dictionary class="NSMutableDictionary" key="actions">
+						<string key="done:">id</string>
+						<string key="onClick:">id</string>
+						<string key="onHide:">id</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="actionInfosByName">
+						<object class="IBActionInfo" key="done:">
 							<string key="name">done:</string>
 							<string key="candidateClassName">id</string>
 						</object>
-					</object>
+						<object class="IBActionInfo" key="onClick:">
+							<string key="name">onClick:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="onHide:">
+							<string key="name">onHide:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="hideKeyboard">UIButton</string>
+						<string key="pickerView">UIDatePicker</string>
+						<string key="save">UIButton</string>
+						<string key="tf1">UITextField</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="hideKeyboard">
+							<string key="name">hideKeyboard</string>
+							<string key="candidateClassName">UIButton</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="pickerView">
+							<string key="name">pickerView</string>
+							<string key="candidateClassName">UIDatePicker</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="save">
+							<string key="name">save</string>
+							<string key="candidateClassName">UIButton</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="tf1">
+							<string key="name">tf1</string>
+							<string key="candidateClassName">UITextField</string>
+						</object>
+					</dictionary>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">./Classes/FlipsideViewController.h</string>

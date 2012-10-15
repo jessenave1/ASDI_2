@@ -14,10 +14,19 @@
 - (void)flipsideViewControllerDidFinish:(FlipsideViewController *)controller;
 @end
 
-@interface FlipsideViewController : UIViewController
+@interface FlipsideViewController : UIViewController {
+    
+    IBOutlet UIDatePicker *pickerView;
+    IBOutlet UITextField *tf1;
+    IBOutlet UIButton *save;
+    IBOutlet UIButton *hideKeyboard;
+}
 
 @property (assign, nonatomic) id <FlipsideViewControllerDelegate> delegate;
 
 - (IBAction)done:(id)sender;
+
+-(IBAction)onClick:(id)sender;
+-(IBAction)onHide:(id)sender;
 
 @end

@@ -33,4 +33,19 @@
     [self.delegate flipsideViewControllerDidFinish:self];
 }
 
+- (IBAction)onClick:(id)sender
+{
+    if(pickerView != nil)
+    {
+    NSDate *date = pickerView.date;
+    
+    NSLog(@"%@", date);
+    }
+}
+
+- (IBAction)onHide:(id)sender
+{
+    [self.view endEditing:YES];
+}
+
 @end
