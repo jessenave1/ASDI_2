@@ -13,9 +13,14 @@
 @end
 
 @implementation MainViewController
+@synthesize passedValue;
+@synthesize passedDate;
 
 - (void)viewDidLoad
 {
+    noteLabel.text = passedValue;
+    dateLabel.text = [NSDateFormatter localizedStringFromDate:passedDate dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterMediumStyle];
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }

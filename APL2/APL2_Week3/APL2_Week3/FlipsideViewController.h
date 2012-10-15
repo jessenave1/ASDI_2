@@ -20,8 +20,9 @@
     IBOutlet UITextField *tf1;
     IBOutlet UIButton *save;
     IBOutlet UIButton *hideKeyboard;
+    NSString *passedValue;
 }
-
+@property (nonatomic, retain)NSString *passedValue;
 @property (assign, nonatomic) id <FlipsideViewControllerDelegate> delegate;
 
 - (IBAction)done:(id)sender;
