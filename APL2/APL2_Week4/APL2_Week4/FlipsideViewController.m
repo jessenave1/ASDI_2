@@ -59,9 +59,11 @@
     if(defaults != nil)
     {
         NSDateFormatter *dateFormat = [[NSDateFormatter alloc]init];
-        NSString *dateText = [dateFormat stringFromDate:datePicker.date];
-        
+        [dateFormat setDateFormat:@"mm/dd/yy"];
+        NSString *dateText = [dateFormat stringFromDate:[datePicker date]];
+        NSLog(@"%@", dateText);
         NSString *textString = textField.text;
+        NSLog(@"%@", textString);
         [defaults setObject:textString forKey:@"textField"];
         [defaults setObject:dateText forKey:@"date"];
         [defaults synchronize];
