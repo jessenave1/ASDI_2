@@ -53,7 +53,7 @@
 
 - (void)onSwipe:(UISwipeGestureRecognizer *)recognizer
 {
-    
+    if (recognizer.direction == UISwipeGestureRecognizerDirectionLeft) {
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     if(defaults != nil)
@@ -71,7 +71,14 @@
     }
     
         [self.delegate flipsideViewControllerDidFinish:self];
+    }else if(recognizer.direction == UISwipeGestureRecognizerDirectionRight){
         
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Must swipe left."
+                                                        message:@"You must swipe left to continue." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+        [alert release];
+        
+    }
 }
 
 
